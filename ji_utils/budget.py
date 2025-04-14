@@ -73,12 +73,12 @@ def compute_energy_budget(ta_path, zg_path, ua_path, va_path, wa_path) -> xr.Dat
 
     # 输出所有变量为 xarray.Dataset
     result = xr.Dataset({
-        'DSE': dse,
-        'ds_dt': (dse.dims, ds_dt),
-        'ds_dx': (dse.dims, ds_dx),
-        'ds_dy': (dse.dims, ds_dy),
-        'ds_dp': (dse.dims, ds_dp),
-        'Q': (dse.dims, Q),
+        'DSE': dse.data,
+        'ds_dt': (dse.dims, ds_dt.data),
+        'ds_dx': (dse.dims, ds_dx.data),
+        'ds_dy': (dse.dims, ds_dy.data),
+        'ds_dp': (dse.dims, ds_dp.data),
+        'Q': (dse.dims, Q.data),
     }, coords=dse.coords)
 
     return result
