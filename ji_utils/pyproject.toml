@@ -1,0 +1,17 @@
+[project]
+name = "ji_utils"
+version = "0.1.0"
+description = "A simple utility to compute dx and dy from lat/lon."
+authors = [
+  { name="Xianpu Ji", email="xianpuji@hhu.edu.cn" }
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy"
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
